@@ -73,9 +73,9 @@ GET /recommend/user_000001
 
 ## 🧪 Тесты
 
-bash
+```bash
 pytest tests/
-
+```
 
 ## 📊 Результаты
 
