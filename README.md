@@ -19,30 +19,57 @@
 
 ## 📁 Структура
 
-ecsys/
+```
+recsys/
 ├── src/
-│ ├── main.py # FastAPI
-│ ├── model.py # Логика модели
-│ └── train.py # Обучение
-├── tests/ # Тесты
-├── data/ # Данные
-├── notebooks/ # EDA
-└── requirements.txt
+│   ├── main.py          # FastAPI приложение
+│   ├── model.py         # Логика модели
+│   └── train.py         # Обучение модели
+├── tests/               # Тесты
+├── data/                # Данные
+├── notebooks/           # Jupyter ноутбуки (EDA)
+├── archive/             # Архивные скрипты
+├── .gitignore
+├── README.md
+└── requirements.txt     # Зависимости
+```
 
-## 📡 API
+## 🚀 API Endpoints
 
-### GET /recommend/{user_id}
-**Пример:** `GET /recommend/user_000001`
-**Ответ:**
-json
+### Получить рекомендации для пользователя
+
+**Endpoint:** `GET /recommend/{user_id}`
+
+**Параметры:**
+| Параметр | Тип | Описание |
+|----------|-----|----------|
+| `user_id` | `string` | ID пользователя (например, `user_000001`) |
+
+---
+
+### 📥 Пример запроса
+
+```http
+GET /recommend/user_000001
+```
+### 📤 Пример ответа
+
+```json
 {
   "user_id": "user_000001",
   "cluster": 2,
   "recommendations": [
-    {"artist": "Radiohead", "track": "Creep"},
-    {"artist": "Nirvana", "track": "Smells Like Teen Spirit"}
+    {
+      "artist": "Radiohead",
+      "track": "Creep"
+    },
+    {
+      "artist": "Nirvana",
+      "track": "Smells Like Teen Spirit"
+    }
   ]
-} 
+}
+```
 
 ## 🧪 Тесты
 
