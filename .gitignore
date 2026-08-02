@@ -12,3 +12,7 @@ __pycache__/
 .vscode/
 *.pkl
 logs/
+test_script.py
+QA_Ivan.txt
+*.csv
+venv312
