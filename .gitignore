@@ -1,3 +1,5 @@
+.gitignore
+trash
 venv/
 __pycache__/
 *.pkl
