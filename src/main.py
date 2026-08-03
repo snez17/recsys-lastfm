@@ -12,7 +12,7 @@ from models.popular import PopularRecommender
 from models.itemknn import ItemKNNRecommender
 from models.als import ALSRecommender
 from models.usertop import UserTopRecommender
-
+from models.hybrid import HybridRecommender
 # ========================
 # ВЫБОР МОДЕЛИ
 # ========================
@@ -24,6 +24,7 @@ MODEL_PATHS = {
     "itemknn": Path(__file__).parent.parent / "data" / "models" / "itemknn_model.pkl",
     "als": Path(__file__).parent.parent / "data" / "models" / "als_model.pkl",
     "usertop": Path(__file__).parent.parent / "data" / "models" / "usertop_model.pkl",
+    "hybrid": Path(__file__).parent.parent / "data" / "models" / "hybrid_model.pkl",
 }
 
 MODEL_CLASSES = {
@@ -31,6 +32,7 @@ MODEL_CLASSES = {
     "itemknn": ItemKNNRecommender,
     "als": ALSRecommender,
     "usertop": UserTopRecommender,
+    "hybrid": HybridRecommender,
 }
 
 print(f"Загрузка модели {MODEL_NAME}...")
